@@ -32,26 +32,27 @@ $("button").on("click", function(event) {
     method: "GET"
   }).done(function (response) {
 
-    console.log(queryURL);
+    // console.log(queryURL);
     var result = response.data;
-    console.log(response);
+    // console.log(response);
 
     for (var i = 0; i < result.length; i++){
-      console.log(response.data[i].images.fixed_height_still.url);
+      // console.log(result[i].images.fixed_height_still.url);
       var halloweenDiv = $("<div>");
       // create and store an image tag
       var halloweenImage = $("<img>");
       // add an img attribute of src and pass the collected response to it
-      halloweenImage.attr("src", response.data[i].images.fixed_height_still.url);
-
+      halloweenImage.attr("src", result[i].images.fixed_height_still.url);
+      // append those new images to the halloween Div variable
       halloweenDiv.append(halloweenImage);
-
+      // put it on the screen
       $("#hallow-gif-image").prepend(halloweenDiv);
       }
+
   });
 
 
 
-
+// click event function ends
 });
 
