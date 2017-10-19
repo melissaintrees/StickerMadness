@@ -7,7 +7,7 @@ function generateGifs() {
   $("button").on("click", function(event) {
 
     var halloween = $(this).attr("data-name");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + halloween + "&api_key=SIBUreqeKQeIBbZsMZbEinHIO3ZVH8lL&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + halloween + "&api_key=SIBUreqeKQeIBbZsMZbEinHIO3ZVH8lL&limit=10";
 
     $.ajax ({
       url: queryURL,
