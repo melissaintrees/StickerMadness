@@ -1,4 +1,4 @@
-var topics = ["pumpkin", "goblin", "ghost", "candy", "hauntedhouse", "monsters", "devils", "spooky"];
+var topics = ["pumpkin", "goblin", "ghost", "candy", "trump", "monsters", "hauntedhouse", "evil"];
 
 
 // Your app should take the topics in this array and create buttons in your HTML.
@@ -51,28 +51,38 @@ $("button").on("click", function(event) {
       halloweenImage.attr("data-state", "still");
       // append those new images to the halloween Div variable
       halloweenDiv.append(halloweenImage);
+      // Under every gif, display its rating (PG, G, so on).
+      // crate and store a p tag
+      var halloweenRating = $("<p>");
+      // add the rating from the api to the html
+      halloweenRating.html("Rating: " + result[i].rating);
+      // append new ratings to the halloweenDiv:
+      halloweenDiv.append(halloweenRating);
       // put it on the screen
       $("#hallow-gif-image").prepend(halloweenDiv);
+
       }
+
       // When the user clicks one of the still GIPHY images, the gif should animate. If the user clicks the gif again, it should stop playing.
 
-        // set another on click event for pressing the gifs
-        $("img").on( "click", function(event) {
-          // event.stopPropagation();
-          var state = $(this).attr("data-state");
-          // console.log(state);
-          if (state === "still"){
-            $(this).attr("src", $(this).attr("data-animate"));
-            $(this).attr("data-state", "animate");
-          } else {
-            $(this).attr("src", $(this).attr("data-still"));
-            $(this).attr("data-state", "still");
-          }
-        // end on click
-        });
-
+      // set another on click event for pressing the gifs
+      $("img").on( "click", function(event) {
+        // event.stopPropagation();
+        var state = $(this).attr("data-state");
+        // console.log(state);
+        if (state === "still"){
+          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("data-state", "animate");
+        } else {
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
+      // end on click
       });
 
+    });
+
+    // Under every gif, display its rating (PG, G, so on).
 
 // click event function ends
 });
