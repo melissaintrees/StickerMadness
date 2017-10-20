@@ -3,25 +3,32 @@
 <head>
   <title>Halloween Giphy App</title>
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Griffy|Spicy+Rice" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Griffy|open+sans" rel="stylesheet">
 </head>
-<body>
+<body><div class="bg">
 
-<header><h1>Halloween Giphy</h1></header>
+<header>
+  <h1>Halloween Giphy</h1>
+  <h2 id="subtitle">Click on any of the buttons for a spooky collection of still Images. <br>Click on the images to turn them to Gifs!</h2>
+</header>
+
 <!-- buttons get dumped here -->
 <div id="button-holder"></div>
+<br>
 
 <!-- adding the buttons with user input-->
 <form id="halloween-form">
-  <label for="halloween-input"></label>
-  <input type="text" id="halloween-input"><br>
-
+<input id="add-button" type="submit" value="Add a Spooky Button">
+  <label for="halloween-input"></label><br><br>
+  <input type="text" id="halloween-input">
   <!-- Button triggers new halloween button to be added -->
-  <input id="add-button" type="submit" value="Add a Spooky Button">
+
+
 </form>
+  <br><br>
 
 <!-- gifs appear here -->
-<div id="hallow-gif-image"></div>
+<div id="hallow-gif-image" class="centered"></div></div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,24 +1,60 @@
 body {
-background-color: orange;
+
+background-color:#ff7b0f;
+
 }
 
 .buttons {
-  width: 100px;
+ /* width: 100px;*/
   padding: 10px;
   margin: 20px;
-  color: orange;
-  background-color: black;
+  color: #ff7b0f;
+  background-color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 #button-holder {
   text-align: center;
 }
+
 h1  {
   font-family: 'Griffy', cursive;
-  font-size: 52px;
+  font-size: 62px;
+
+}
+
+h1, h2 {
   text-align: center;
 }
 
+p, h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:  25px;
 
+}
 
-/*font-family: 'Spicy Rice', cursive;*/
+#hallow-gif-image {
+  text-align: center;
+
+}
+
+#halloween-form {
+  text-align: center;
+}
+
+#halloween-input {
+  width: 200px;
+  height: 40px;
+  background-color: #f93636;
+  color: #ff7b0f;
+  border: #ff7b0f solid 1px;
+}
+
+#add-button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  padding: 10px;
+  color:#ff7b0f;
+  background-color: #000000;
+}
