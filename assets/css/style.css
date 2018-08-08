@@ -9,6 +9,7 @@ button {
   font-family: 'Fredericka the Great', cursive;
   font-size: 20px;
   border: none;
+  background-color: mediumpurple;
 
 }
 
@@ -32,9 +33,6 @@ p, h2, #add-button, #halloween-input {
   color: #ff0081;
 }
 
-#hallow-gif-image {
-  text-align: center;
-}
 
 #halloween-form {
   text-align: center;
@@ -49,7 +47,6 @@ p, h2, #add-button, #halloween-input {
 }
 
 #add-button {
-  
   font-size: 22px;
   padding: 10px;
   color:aliceblue;
@@ -57,10 +54,84 @@ p, h2, #add-button, #halloween-input {
 }
 
 body {
-
   text-align: center;
   background-color: darkslateblue;
+
 }
+
+.rating-txt {
+  font-family: 'Fredericka the Great', cursive;
+  font-size:  20px;
+  color: #ff0081;
+  text-transform: uppercase;
+  align-self: center;
+  margin-top: -30px;
+}
+
+#main-gif-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-content: space-around; */
+  flex-wrap:  wrap;
+}
+.sticker-img {
+  align-self: center;
+}
+
+.star-five {
+  margin: 50px 0;
+  position: relative;
+  display: inline-flex;
+  color: aliceblue;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+}
+
+.star-five:before {
+  border-bottom: 80px solid black;
+
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+}
+
+.star-five:after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  z-index: -100;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid coral;
+  border-left: 100px solid transparent;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
+  -o-transform: rotate(-70deg);
+  content: '';
+}
+
 
 .bubbly-button {
   font-family: 'Helvetica', 'Arial', sans-serif;
