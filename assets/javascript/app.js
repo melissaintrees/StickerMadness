@@ -35,7 +35,6 @@ function makeCalls (){
       console.log(response.data[i]);
       var mainDiv = $('#main-gif-image');
       var mainImg = $("<img>");
-      var textB = $("<h2>")
       var still = response.data[i].images.fixed_width_still.url;
       var anim = response.data[i].images.fixed_width.url
       var rating = response.data[i].rating
@@ -66,8 +65,13 @@ function makeCalls (){
 }
 
 
-
-
+ $("#add-button").on("click", function(){
+   var buttonValue = $("#button-input").val().trim();
+   console.log(buttonValue);
+   $('#button-form')[0].reset();
+   topics.push(buttonValue);
+   renderButtons();
+})
 
 
 var animateButton = function (e) {
@@ -165,7 +169,7 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 //   $("#hallow-gif-image").empty();
 //    // $("#button-holder").hide();
 //   // This line grabs the input from the textbox
-//   var newButton = $("#halloween-input").val().trim();
+//   var newButton = $("#button-input").val().trim();
 //   // Adding input from the textbox to the topics array
 
 //   topics.push(newButton);

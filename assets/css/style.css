@@ -27,18 +27,18 @@ h1, h2 {
   text-align: center;
 }
 
-p, h2, #add-button, #halloween-input {
+p, h2, #add-button, #button-input {
   font-family: 'Fredericka the Great', cursive;
   font-size:  25px;
   color: #ff0081;
 }
 
 
-#halloween-form {
+#button-form {
   text-align: center;
 }
 
-#halloween-input {
+#button-input {
   width: 200px;
   height: 40px;
   background-color:aliceblue;
